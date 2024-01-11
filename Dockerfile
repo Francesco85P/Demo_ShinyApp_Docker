@@ -1,5 +1,5 @@
 # Base R Shiny image
-FROM rocker/shiny
+FROM rocker/shiny-verse
 
 
 # Make a directory in the container
@@ -9,7 +9,7 @@ RUN mkdir /home/shiny-app
 WORKDIR home/shiny-app
 
 # Install R dependencies
-RUN R -e "install.packages(c('tidyverse','lvplot','markdown'))"
+RUN R -e "install.packages(c('lvplot','markdown'))"
 
 # Copy the Shiny app code
 COPY  . .

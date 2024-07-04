@@ -1,4 +1,4 @@
-![example workflow](https://github.com/github/docs/actions/workflows/docker-image.yml/badge.svg?branch=main)
+![example workflow](https://github.com/github/docs/actions/workflows/docker-image.yml/badge.svg?branch=master)
 
 #To build the Docker:
 

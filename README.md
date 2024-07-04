@@ -1,3 +1,5 @@
+![example workflow](https://github.com/github/docs/actions/workflows/docker-image.yml/badge.svg)
+
 #To build the Docker:
 
 sudo docker build -t shiny-docker-demo .

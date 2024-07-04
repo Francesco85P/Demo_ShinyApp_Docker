@@ -36,7 +36,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: francesco85/demo_shiny_app_docker
+          images: francesco85/demo_shiny_app_docker:0e5574283393
 
       - name: Build and push Docker image
         id: push
@@ -45,14 +45,15 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: 0e5574283393
           labels: ${{ steps.meta.outputs.labels }}
       
       
-      - name: Generate artifact attestation
+      * name: Generate artifact attestation
         uses: actions/attest-build-provenance@v1
         with:
           subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
       
+

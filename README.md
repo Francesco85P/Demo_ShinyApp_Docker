@@ -1,4 +1,4 @@
-![example workflow](https://github.com/github/Francesco85P/Demo_ShinyApp_Docker/workflows/docker-image.yml/badge.svg?branch=master)
+![example workflow](https://github.com/Francesco85P/Demo_ShinyApp_Docker/workflows/docker-image.yml/badge.svg?branch=master)
 
 #To build the Docker:
 

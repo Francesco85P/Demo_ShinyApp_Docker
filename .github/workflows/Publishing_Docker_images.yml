@@ -39,7 +39,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: francesco85/demo_shiny_app_docker:0e5574283393
+          images: francesco85/demo_shiny_app_docker
 
       - name: Build and push Docker image
         id: push
@@ -48,7 +48,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: 0e5574283393
+          tags:   ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
        
       - name: AAA
